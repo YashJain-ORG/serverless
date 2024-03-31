@@ -35,7 +35,7 @@ exports.sendEmail = async function(event, context) {
     // Update the email_sent_time in the users table
     await Users.update(
       { email_sent_time: new Date() },
-      { where: { username: userEmail } }
+      { where: { email: userEmail } }
     );
 
     console.log('Email sent:', response);
