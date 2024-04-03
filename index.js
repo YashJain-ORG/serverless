@@ -20,7 +20,9 @@ exports.sendEmail = async function(event, context) {
  
     var userEmail = payload.username;
     var id = payload.id;
-    var url = 'http://thewebapp.me:3000/verify/' + id;
+    // var url = 'http://thewebapp.me:3000/verify/' + id;
+    var url = 'https://thewebapp.me/verify/' + id;
+    
 
     var emailOptions = {
       from: '<mailgun@thewebapp.me>',
